@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurulloh Salaydinov - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    header .contact-info a {
+      color: #8db5a6;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    header .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    select {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job h3 {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+
+    .job ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .job li {
+      font-size: 1.1em;
+    }
+
+    .skills p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header .subtitle {
+        font-size: 1em;
+      }
+
+      section h2 {
+        font-size: 1.6em;
+      }
+
+      section p {
+        font-size: 1em;
+      }
+
+      .job h3 {
+        font-size: 1.2em;
+      }
+
+      .skills p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 id="name">Nurulloh Salaydinov</h1>
+      <p class="subtitle" id="position">Computer Engineering Student</p>
+      <p class="contact-info">
+        <a href="mailto:salaydinovnurullo@gmail.com" id="email">salaydinovnurullo@gmail.com</a> | 
+        <a href="tel:+821076982518" id="phone">+82 10 7698 2518</a>
+      </p>
+      <select id="languageSelect" onchange="changeLanguage()">
+      	<option hidden selected>Language</option>
+        <option value="en">English</option>
+        <option value="ko">Korean</option>
+        <option value="uz">Uzbek</option>
+        <option value="ru">Russian</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2 id="aboutTitle">About Me</h2>
+      <p id="aboutText">Hello! I’m Nurulloh from Uzbekistan. I’m a Computer Engineering student at Chonnam National University. I aim to bring positive interactions with customers, drawing from my diverse cultural experiences.</p>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="container">
+      <h2 id="experienceTitle">Experience</h2>
+      <div class="job">
+        <h3 id="job1Title">Kitchen Assistant - Fish Restaurant, Yeosu</h3>
+        <p id="job1Duration">Duration: 1 Month (2024)</p>
+        <ul>
+          <li id="job1Responsibility1">Assisted in food preparation and kitchen organization.</li>
+          <li id="job1Responsibility2">Worked closely with team members in a fast-paced environment.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3 id="job2Title">Projects at Robocode IT Academy, Uzbekistan</h3>
+        <ul>
+          <li id="job2Responsibility">Completed several programming and development projects.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <h2 id="skillsTitle">Skills</h2>
+      <p id="primaryLanguages">Primary Languages: Uzbek-Turkish (native), English (fluent)</p>
+      <p id="otherLanguages">Other Languages: Basic Korean, Russian, Arabic</p>
+      <p id="programmingLanguages">Programming Languages: Python, JavaScript, HTML, CSS, SQL</p>
+      <p id="frameworks">Frameworks & Tools: Django, Supabase, Svelte, Next.js</p>
+    </div>
+  </section>
+
+  <section class="education">
+    <div class="container">
+      <h2 id="educationTitle">Education</h2>
+      <p id="educationText">Currently studying Computer Engineering at Chonnam National University.</p>
+      <p id="academyText">Studied at Robocode IT Academy in Uzbekistan, completing several development projects.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Nurulloh Salaydinov</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        name: "Nurulloh Salaydinov",
+        position: "Computer Engineering Student",
+        email: "salaydinovnurullo@gmail.com",
+        phone: "+82 10 7698 2518",
+        aboutTitle: "About Me",
+        aboutText: "Hello! I’m Nurulloh from Uzbekistan. I’m a Computer Engineering student at Chonnam National University. I aim to bring positive interactions with customers, drawing from my diverse cultural experiences.",
+        experienceTitle: "Experience",
+        job1Title: "Kitchen Assistant - Fish Restaurant, Yeosu",
+        job1Duration: "Duration: 1 Month (2024)",
+        job1Responsibility1: "Assisted in food preparation and kitchen organization.",
+        job1Responsibility2: "Worked closely with team members in a fast-paced environment.",
+        job2Title: "Projects at Robocode IT Academy, Uzbekistan",
+        job2Responsibility: "Completed several programming and development projects.",
+        skillsTitle: "Skills",
+        primaryLanguages: "Primary Languages: Uzbek-Turkish (native), English (fluent)",
+        otherLanguages: "Other Languages: Basic Korean, Russian, Arabic",
+        programmingLanguages: "Programming Languages: Python, JavaScript, HTML, CSS, SQL",
+        frameworks: "Frameworks & Tools: Django, Supabase, Svelte, Next.js",
+        educationTitle: "Education",
+        educationText: "Currently studying Computer Engineering at Chonnam National University.",
+        academyText: "Studied at Robocode IT Academy in Uzbekistan, completing several development projects."
+      },
+      ko: {
+        name: "누룰로 살라이디노프",
+        position: "컴퓨터 공학 학생",
+        email: "salaydinovnurullo@gmail.com",
+        phone: "+82 10 7698 2518",
+        aboutTitle: "자기소개",
+        aboutText: "안녕하세요! 저는 우즈베키스탄 출신의 누룰로입니다. 현재 전남대학교 컴퓨터 공학과에 재학 중입니다. 다양한 문화적 경험을 통해 긍정적인 상호작용을 나누고 싶습니다.",
+        experienceTitle: "경험",
+        job1Title: "주방 보조 - 피쉬 레스토랑, 여수",
+        job1Duration: "기간: 1개월 (2024)",
+        job1Responsibility1: "음식 준비 및 주방 정리 보조.",
+        job1Responsibility2: "빠른 환경에서 팀원과 함께 작업.",
+        job2Title: "로보코드 IT 아카데미 프로젝트, 우즈베키스탄",
+        job2Responsibility: "여러 프로그래밍 및 개발 프로젝트 완료.",
+        skillsTitle: "기술",
+        primaryLanguages: "모국어: 우즈베크어-터키어, 영어 (유창)",
+        otherLanguages: "기타 언어: 기본 한국어, 러시아어, 아랍어",
+        programmingLanguages: "프로그래밍 언어: 파이썬, 자바스크립트, HTML, CSS, SQL",
+        frameworks: "프레임워크 및 도구: Django, Supabase, Svelte, Next.js",
+        educationTitle: "교육",
+        educationText: "현재 전남대학교에서 컴퓨터 공학을 전공하고 있습니다.",
+        academyText: "우즈베키스탄 로보코드 IT 아카데미에서 여러 개발 프로젝트를 완료했습니다."
+      },
+      uz: {
+        name: "Nurulloh Salaydinov",
+        position: "Kompyuter muhandisligi talabasi",
+        email: "salaydinovnurullo@gmail.com",
+        phone: "+82 10 7698 2518",
+        aboutTitle: "Haqqimda",
+        aboutText: "Salom! Men Uzbekistonlik Nurullohman. Hozirda Chonnam Milliy Universitetida Kompyuter Muhandisligi bo‘yicha ta’lim olayapman. Turli madaniy tajribalardan foydalangan holda mijozlar bilan ijobiy aloqalar o‘rnatishga intilaman.",
+        experienceTitle: "Tajriba",
+        job1Title: "Oshxona yordamchisi - Baliq restoran, Yeosu",
+        job1Duration: "Muddat: 1 oy (2024)",
+        job1Responsibility1: "Taom tayyorlash va oshxona tartibini saqlashda yordam berish.",
+        job1Responsibility2: "Tezkor muhitda jamoa bilan ishlash.",
+        job2Title: "Robocode IT Akademiyasi, O‘zbekiston",
+        job2Responsibility: "Bir nechta dasturlash va rivojlantirish loyihalarini tamomlash.",
+        skillsTitle: "Ko‘nikmalar",
+        primaryLanguages: "Asosiy tillar: O‘zbek-Turk (ona tili), Ingliz (erkin)",
+        otherLanguages: "Boshqa tillar: Asosiy Koreys, Rus, Arab",
+        programmingLanguages: "Dasturlash tillari: Python, JavaScript, HTML, CSS, SQL",
+        frameworks: "Frameworks & Asboblar: Django, Supabase, Svelte, Next.js",
+        educationTitle: "Ta’lim",
+        educationText: "Hozirda Chonnam Milliy Universitetida Kompyuter Muhandisligi bo‘yicha ta’lim olayapman.",
+        academyText: "Robocode IT Akademiyasida O‘zbekistonda bir nechta rivojlantirish loyihalarini tamomladim."
+      },
+      ru: {
+        name: "Нурулло Салаидинов",
+        position: "Студент компьютерной инженерии",
+        email: "salaydinovnurullo@gmail.com",
+        phone: "+82 10 7698 2518",
+        aboutTitle: "Обо мне",
+        aboutText: "Здравствуйте! Меня зовут Нурулло, я из Узбекистана. Я студент факультета компьютерной инженерии в Чоннамском национальном университете. Стремлюсь устанавливать положительные взаимодействия с клиентами, основываясь на своем разнообразном культурном опыте.",
+        experienceTitle: "Опыт",
+        job1Title: "Помощник повара - Рыбный ресторан, Еосу",
+        job1Duration: "Продолжительность: 1 месяц (2024)",
+        job1Responsibility1: "Помощь в приготовлении пищи и организации кухни.",
+        job1Responsibility2: "Работа с командой в быстро меняющейся среде.",
+        job2Title: "Проекты в Robocode IT Academy, Узбекистан",
+        job2Responsibility: "Завершил несколько проектов по программированию и разработке.",
+        skillsTitle: "Навыки",
+        primaryLanguages: "Основные языки: Узбекско-Турецкий (родной), Английский (свободно)",
+        otherLanguages: "Другие языки: Основы корейского, русского, арабского",
+        programmingLanguages: "Языки программирования: Python, JavaScript, HTML, CSS, SQL",
+        frameworks: "Фреймворки и инструменты: Django, Supabase, Svelte, Next.js",
+        educationTitle: "Образование",
+        educationText: "В настоящее время учусь на факультете компьютерной инженерии в Чоннамском национальном университете.",
+        academyText: "Учился в Robocode IT Academy в Узбекистане, завершив несколько проектов по разработке."
+      }
+    };
+
+    function changeLanguage(lang) {
+    	if (!lang) {
+      		var language = document.getElementById("languageSelect").value;
+    	} else {
+    		var language = lang
+    	}
+      const langData = translations[language];
+
+      document.getElementById("name").innerText = langData.name;
+      document.getElementById("position").innerText = langData.position;
+      document.getElementById("email").innerText = langData.email;
+      document.getElementById("phone").innerText = langData.phone;
+      document.getElementById("aboutTitle").innerText = langData.aboutTitle;
+      document.getElementById("aboutText").innerText = langData.aboutText;
+      document.getElementById("experienceTitle").innerText = langData.experienceTitle;
+      document.getElementById("job1Title").innerText = langData.job1Title;
+      document.getElementById("job1Duration").innerText = langData.job1Duration;
+      document.getElementById("job1Responsibility1").innerText = langData.job1Responsibility1;
+      document.getElementById("job1Responsibility2").innerText = langData.job1Responsibility2;
+      document.getElementById("job2Title").innerText = langData.job2Title;
+      document.getElementById("job2Responsibility").innerText = langData.job2Responsibility;
+      document.getElementById("skillsTitle").innerText = langData.skillsTitle;
+      document.getElementById("primaryLanguages").innerText = langData.primaryLanguages;
+      document.getElementById("otherLanguages").innerText = langData.otherLanguages;
+      document.getElementById("programmingLanguages").innerText = langData.programmingLanguages;
+      document.getElementById("frameworks").innerText = langData.frameworks;
+      document.getElementById("educationTitle").innerText = langData.educationTitle;
+      document.getElementById("educationText").innerText = langData.educationText;
+      document.getElementById("academyText").innerText = langData.academyText;
+    }
+    changeLanguage('ko')
+  </script>
+</body>
+</html>
